@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HYJinChangTiJ.ttf">
+            <string>HYJinChangTiJ</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="tenementAddResultViewController">
+            <connections>
+                <outlet property="AddErrorView" destination="toa-m4-KhN" id="4wN-7J-0K2"/>
+                <outlet property="AddSuccessView" destination="N2V-gS-Rzp" id="SPS-Gq-frb"/>
+                <outlet property="backBtn" destination="Txh-8M-4tv" id="XoG-bA-7Ed"/>
+                <outlet property="goHomeBtn" destination="hjt-DW-Tfk" id="NHF-yb-t9c"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2V-gS-Rzp">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yz_pxcook_add_success.png" translatesAutoresizingMaskIntoConstraints="NO" id="ERM-UK-IPN">
+                            <rect key="frame" x="137.5" y="100" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="50y-A7-oyV"/>
+                                <constraint firstAttribute="height" constant="100" id="sdE-1Y-Jqm"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您已成功提交报修申请，物业相关人员会尽快安排处理，请您保持手机畅通。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EH1-JH-lhH">
+                            <rect key="frame" x="15" y="253.5" width="345" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="iC8-ef-pGJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HYJinChangTiJ" family="HYJinChangTiJ" pointSize="16"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjt-DW-Tfk">
+                            <rect key="frame" x="15" y="567" width="345" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="gpg-hH-TCd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
+                            <state key="normal" title="返回首页">
+                                <color key="titleColor" red="0.91764705879999997" green="0.3294117647" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="backIndexClick:" destination="-1" eventType="touchUpInside" id="snv-qt-RVx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ps-pY-4Lq">
+                            <rect key="frame" x="15" y="517" width="345" height="35"/>
+                            <color key="backgroundColor" red="0.87058823529999996" green="0.2274509804" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
+                            <state key="normal" title="报修详情"/>
+                            <connections>
+                                <action selector="toDetailClick:" destination="-1" eventType="touchUpInside" id="e1q-8D-3ho"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="操作成功" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfA-NP-QyB">
+                            <rect key="frame" x="147.5" y="215" width="80" height="23.5"/>
+                            <fontDescription key="fontDescription" name="HYJinChangTiJ" family="HYJinChangTiJ" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="hjt-DW-Tfk" firstAttribute="leading" secondItem="N2V-gS-Rzp" secondAttribute="leading" constant="15" id="5BC-Bf-YiJ"/>
+                        <constraint firstItem="IfA-NP-QyB" firstAttribute="top" secondItem="ERM-UK-IPN" secondAttribute="bottom" constant="15" id="DzI-su-dcL"/>
+                        <constraint firstItem="EH1-JH-lhH" firstAttribute="centerX" secondItem="IfA-NP-QyB" secondAttribute="centerX" id="F9V-g2-ffd"/>
+                        <constraint firstItem="1ps-pY-4Lq" firstAttribute="height" secondItem="hjt-DW-Tfk" secondAttribute="height" id="FMg-eE-IWs"/>
+                        <constraint firstAttribute="trailing" secondItem="EH1-JH-lhH" secondAttribute="trailing" constant="15" id="KGM-1d-mB6"/>
+                        <constraint firstAttribute="bottom" secondItem="hjt-DW-Tfk" secondAttribute="bottom" constant="65" id="N8H-TW-p4O"/>
+                        <constraint firstAttribute="trailing" secondItem="hjt-DW-Tfk" secondAttribute="trailing" constant="15" id="TSR-bR-YBR"/>
+                        <constraint firstItem="EH1-JH-lhH" firstAttribute="top" secondItem="IfA-NP-QyB" secondAttribute="bottom" constant="15" id="TlQ-VE-GpF"/>
+                        <constraint firstItem="EH1-JH-lhH" firstAttribute="leading" secondItem="N2V-gS-Rzp" secondAttribute="leading" constant="15" id="fQW-kW-PYv"/>
+                        <constraint firstItem="IfA-NP-QyB" firstAttribute="centerX" secondItem="ERM-UK-IPN" secondAttribute="centerX" id="gwC-io-fhS"/>
+                        <constraint firstItem="ERM-UK-IPN" firstAttribute="centerX" secondItem="N2V-gS-Rzp" secondAttribute="centerX" id="hdI-be-jf3"/>
+                        <constraint firstItem="ERM-UK-IPN" firstAttribute="top" secondItem="N2V-gS-Rzp" secondAttribute="top" constant="100" id="ih0-zz-d3k"/>
+                        <constraint firstItem="1ps-pY-4Lq" firstAttribute="width" secondItem="hjt-DW-Tfk" secondAttribute="width" id="jWA-Vl-5lx"/>
+                        <constraint firstItem="hjt-DW-Tfk" firstAttribute="top" secondItem="1ps-pY-4Lq" secondAttribute="bottom" constant="15" id="sLg-YB-uL0"/>
+                        <constraint firstItem="1ps-pY-4Lq" firstAttribute="centerX" secondItem="hjt-DW-Tfk" secondAttribute="centerX" id="tu0-ax-iCg"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="toa-m4-KhN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yz_pxcook_add_error.png" translatesAutoresizingMaskIntoConstraints="NO" id="spq-Dn-QhH">
+                            <rect key="frame" x="137.5" y="100" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="TeC-NL-Fru"/>
+                                <constraint firstAttribute="width" constant="100" id="qWL-x2-AUa"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可能由于网络原因，此次提交不成功，请您返回之前页面重新填写" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUl-9g-6ux">
+                            <rect key="frame" x="15" y="253.5" width="345" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="V0k-62-p5A"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HYJinChangTiJ" family="HYJinChangTiJ" pointSize="16"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="操作失败" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kap-Bf-pDF">
+                            <rect key="frame" x="147.5" y="215" width="80" height="23.5"/>
+                            <fontDescription key="fontDescription" name="HYJinChangTiJ" family="HYJinChangTiJ" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txh-8M-4tv">
+                            <rect key="frame" x="15" y="567" width="345" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="dc5-7g-ccp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HYJinChangTiJ" family="HYJinChangTiJ" pointSize="20"/>
+                            <state key="normal" title="返回">
+                                <color key="titleColor" red="0.91764705879999997" green="0.3294117647" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="backClick:" destination="-1" eventType="touchUpInside" id="fkc-WN-VGI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Txh-8M-4tv" secondAttribute="trailing" constant="15" id="0Tf-3i-kaD"/>
+                        <constraint firstItem="kap-Bf-pDF" firstAttribute="top" secondItem="spq-Dn-QhH" secondAttribute="bottom" constant="15" id="3R6-Yn-4ri"/>
+                        <constraint firstAttribute="trailing" secondItem="TUl-9g-6ux" secondAttribute="trailing" constant="15" id="6iL-ea-DN6"/>
+                        <constraint firstAttribute="bottom" secondItem="Txh-8M-4tv" secondAttribute="bottom" constant="65" id="M6a-63-fha"/>
+                        <constraint firstItem="TUl-9g-6ux" firstAttribute="centerX" secondItem="kap-Bf-pDF" secondAttribute="centerX" id="bfa-Y5-c8k"/>
+                        <constraint firstItem="spq-Dn-QhH" firstAttribute="centerX" secondItem="toa-m4-KhN" secondAttribute="centerX" id="c8W-16-ELQ"/>
+                        <constraint firstItem="TUl-9g-6ux" firstAttribute="top" secondItem="kap-Bf-pDF" secondAttribute="bottom" constant="15" id="g4O-bP-iPw"/>
+                        <constraint firstItem="spq-Dn-QhH" firstAttribute="top" secondItem="toa-m4-KhN" secondAttribute="top" constant="100" id="ngU-de-iXD"/>
+                        <constraint firstItem="TUl-9g-6ux" firstAttribute="leading" secondItem="toa-m4-KhN" secondAttribute="leading" constant="15" id="reX-LF-wbX"/>
+                        <constraint firstItem="kap-Bf-pDF" firstAttribute="centerX" secondItem="spq-Dn-QhH" secondAttribute="centerX" id="wK7-M1-Xub"/>
+                        <constraint firstItem="Txh-8M-4tv" firstAttribute="leading" secondItem="toa-m4-KhN" secondAttribute="leading" constant="15" id="zQa-x9-con"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="toa-m4-KhN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fg0-BE-dgf"/>
+                <constraint firstAttribute="trailing" secondItem="N2V-gS-Rzp" secondAttribute="trailing" id="I7U-5A-RFH"/>
+                <constraint firstItem="N2V-gS-Rzp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ttr-xu-LsJ"/>
+                <constraint firstAttribute="trailing" secondItem="toa-m4-KhN" secondAttribute="trailing" id="XJ1-Xe-Nkz"/>
+                <constraint firstAttribute="bottom" secondItem="N2V-gS-Rzp" secondAttribute="bottom" id="g9D-ec-EPp"/>
+                <constraint firstItem="N2V-gS-Rzp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kLN-a4-iLD"/>
+                <constraint firstItem="toa-m4-KhN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nEg-aY-7JW"/>
+                <constraint firstAttribute="bottom" secondItem="toa-m4-KhN" secondAttribute="bottom" id="r60-0u-vqR"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="yz_pxcook_add_error.png" width="100" height="100"/>
+        <image name="yz_pxcook_add_success.png" width="100" height="100"/>
+    </resources>
+</document>

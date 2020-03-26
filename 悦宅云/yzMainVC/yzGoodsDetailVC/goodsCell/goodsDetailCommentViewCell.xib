@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HYJinChangTiJ.ttf">
+            <string>HYJinChangTiJ</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="48" id="KGk-i7-Jjw" customClass="goodsDetailCommentViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="47.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品评价" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iks-Hv-43a">
+                        <rect key="frame" x="15" y="15" width="64" height="19.5"/>
+                        <fontDescription key="fontDescription" name="HYJinChangTiJ" family="HYJinChangTiJ" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共有0人评价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csX-WM-649">
+                        <rect key="frame" x="94" y="16.5" width="77.5" height="17"/>
+                        <fontDescription key="fontDescription" name="HYJinChangTiJ" family="HYJinChangTiJ" pointSize="14"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yz_right_gray.png" translatesAutoresizingMaskIntoConstraints="NO" id="YB9-90-6XS">
+                        <rect key="frame" x="296" y="16" width="9" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="Up4-dm-sAo"/>
+                            <constraint firstAttribute="width" constant="9" id="ldk-c1-hCv"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好评率100%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWJ-tz-DCy">
+                        <rect key="frame" x="235" y="31.5" width="70" height="16"/>
+                        <fontDescription key="fontDescription" name="HYJinChangTiJ" family="HYJinChangTiJ" pointSize="13"/>
+                        <color key="textColor" red="0.91764705882352937" green="0.32941176470588235" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="U2i-3P-ILj">
+                        <rect key="frame" x="15" y="38" width="205" height="3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="3" id="30c-W9-N9N"/>
+                        </constraints>
+                        <color key="progressTintColor" red="1" green="0.2470588235" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="trackTintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </progressView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="U2i-3P-ILj" firstAttribute="centerY" secondItem="XWJ-tz-DCy" secondAttribute="centerY" id="5uq-tF-E0h"/>
+                    <constraint firstItem="YB9-90-6XS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ARw-aG-jJ4"/>
+                    <constraint firstAttribute="trailing" secondItem="XWJ-tz-DCy" secondAttribute="trailing" constant="15" id="LIa-IK-BWn"/>
+                    <constraint firstItem="csX-WM-649" firstAttribute="centerY" secondItem="iks-Hv-43a" secondAttribute="centerY" id="MtX-5j-R4T"/>
+                    <constraint firstItem="iks-Hv-43a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="aZH-0O-dOR"/>
+                    <constraint firstAttribute="bottom" secondItem="XWJ-tz-DCy" secondAttribute="bottom" id="cIf-fK-Rr5"/>
+                    <constraint firstItem="U2i-3P-ILj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="e3f-cP-5uC"/>
+                    <constraint firstItem="iks-Hv-43a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="i6I-2L-PhL"/>
+                    <constraint firstAttribute="trailing" secondItem="YB9-90-6XS" secondAttribute="trailing" constant="15" id="mtQ-K3-g1J"/>
+                    <constraint firstItem="csX-WM-649" firstAttribute="leading" secondItem="iks-Hv-43a" secondAttribute="trailing" constant="15" id="nKH-Tl-sXW"/>
+                    <constraint firstItem="U2i-3P-ILj" firstAttribute="trailing" secondItem="XWJ-tz-DCy" secondAttribute="leading" constant="-15" id="yiu-B7-ebL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="34" y="118"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="yz_right_gray.png" width="9" height="16"/>
+    </resources>
+</document>

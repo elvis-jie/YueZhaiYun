@@ -1,0 +1,192 @@
+//
+//  yzProductPrefixHeader.pch
+//  yzProduct
+//
+//  Created by LiuHQ on 2018/9/20.
+//  Copyright © 2018年 CC. All rights reserved.
+//
+
+#ifndef yzProductPrefixHeader_pch
+#define yzProductPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define YSize(x) [[UIDevice new].systemVersion integerValue]>=9.0?[UIFont fontWithName:@"PingFangSC-Light" size:x]:[UIFont fontWithName:@"Helvetica Neue" size:x]//定义字体大小
+
+/** 弱引用 */
+#define WEAKSELF __weak typeof(self) weakSelf = self;
+//是否为iphoneX
+#define IPHONE_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define kIs_iphone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define kIs_iPhoneX kScreenWidth >=375.0f && kScreenHeight >=812.0f&& kIs_iphone
+/*TabBar高度*/
+#define kTabBarHeight (CGFloat)(kIs_iPhoneX?(49.0 + 34.0):(49.0))
+
+#define mDeviceWidth [UIScreen mainScreen].bounds.size.width        //屏幕宽
+#define mDeviceHeight [UIScreen mainScreen].bounds.size.height      //屏幕高
+#define CURRENT_IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+#define appDelegate (AppDelegate *)[UIApplication sharedApplication].delegate
+//自动适配尺寸
+#define AutoWitdh(width) (width)*mDeviceWidth/375.0 //宽度
+#define AutoHeight(height) (height)*mDeviceHeight/750.0//高度
+// n*(3/4)=pt
+#define IOS_VERSION_10_OR_LATER (([[[UIDevice currentDevice]systemVersion]floatValue]>=10.0)? (YES):(NO))
+#define AdapationLabelFont(n) (IOS_VERSION_10_OR_LATER?((n-1)*([[UIScreen mainScreen]bounds].size.width/375.0f)):((n)*([[UIScreen mainScreen]bounds].size.width/375.0f)))
+//顶部NAV高度
+#define NavTopHeight self.navigationController.navigationBar.bounds.size.height
+//顶部nav+状态栏高度
+#define DCTopNavHeight self.navigationController.navigationBar.bounds.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
+/** 底部tab高度 */
+#define BottomTabHeight [[UITabBarController alloc] init].tabBar.frame.size.height
+
+// 取色值相关的方法
+#define RGB(r,g,b)  [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f alpha:1.f]
+#define RGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f alpha:(a)]
+#define RGBOF(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define RGBA_OF(rgbValue) [UIColor colorWithRed:((float)(((rgbValue) & 0xFF000000) >> 24))/255.0 green:((float)(((rgbValue) & 0x00FF0000) >> 16))/255.0 blue:((float)(rgbValue & 0x0000FF00) >> 8)/255.0 alpha:((float)(rgbValue & 0x000000FF))/255.0]
+#define RGBAOF(v, a) [UIColor colorWithRed:((float)(((v) & 0xFF0000) >> 16))/255.0 green:((float)(((v) & 0x00FF00) >> 8))/255.0 blue:((float)(v & 0x0000FF))/255.0 alpha:a]
+
+#define Rect(text,width,font) [text boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+
+/** 默认头像图片 */
+#define FaultHeadImg [UIImage imageNamed:@"tjcclz_fault_header"]
+/** 默认分类图片 */
+#define FaultClassImg [UIImage imageNamed:@"tjcclz_fault_goods"]
+/** 默认产品图片 */
+#define FaultGoodsImg [UIImage imageNamed:@"yz_goods_default"]
+/** 默认店铺banner图片 */
+#define FaultShopBanerImg [UIImage imageNamed:@"tjcclz_shop_banner"]
+/** 默认店铺logo图片*/
+#define FaultShopIconImg [UIImage imageNamed:@"yz_shop_default"]
+
+/** token **/
+#define Token [yzUserInfoModel getLoginUserInfo:@"token"]
+
+#define postUrl @"http://api.yuezhaiyun.com/app/"
+//#define postUrl @"http://192.168.0.116:8087/"
+#define imageUrl @"https://ecjia95079.oss-cn-beijing.aliyuncs.com/"
+
+//友盟
+#define UMAppKey @"5c4a6802b465f5751b001232"
+#import <UMCommon/UMCommon.h>
+#import <UMShare/UMShare.h>
+#import <UMCommonLog/UMCommonLogHeaders.h>
+#import "WXApi.h"
+
+
+//微信
+#define WXAppKey @"wxf4d653365568473a"
+#define WXAppSecret @"35a223ccb3b69ba9bc689e2ac0e271b3"
+
+//高德
+#define GDAppKey @"e21207e82dc483dcc34c40e188ddcf89"
+
+//阿里云推送
+#import <CloudPushSDK/CloudPushSDK.h>
+#define aLiAppKey @"28086773"
+#define aLiAppSecret @"3aa8ac790b408595e381e452cbffb04d"
+
+//阿里云
+
+#define OSSAceessKey @"LTAIxFachww57m1d"
+#define OSSSecret @"Mk3yevKLkHW8K3Ig52uEWYFUUxOf5A"
+#define BUCKETNAME @"ecjia95079"
+#define OSSendPoint @"oss-cn-beijing.aliyuncs.com"
+#define OSSImageUrl @"https://ecjia95079.oss-cn-beijing.aliyuncs.com/"
+//#define OSSAceessKey @"LTAImwbWbdjWB74b"
+//#define OSSSecret @"gJQdnhL5muJfNylar8uuZpJAsVkyY8"
+//#define BUCKETNAME @"ph-app"
+//#define OSSendPoint @"oss-cn-beijing.aliyuncs.com"
+//#define OSSImageUrl @"http://47.94.173.6/app/app/probaoxiu/getSTSToken/"
+
+//颜色
+#define NewAppDefaultColor RGBA(229, 46, 99, 1)
+#define NewHeaderButtonPreColor RGBA(255, 63, 119, 1)
+#define NewHeaderButtonTitleColor RGBA(255, 255, 255, 1)
+#define AppButtonColor RGBA(222, 58 ,36, 1)
+#define AppNavTitleColor RGBA(22, 22, 22, 1)
+#define AppBackTitleColor RGB(234, 84 ,19)
+
+#define kIs_iPhoneX (mDeviceWidth >= 375.f && mDeviceHeight >= 812.f)
+#define kNavBarHeight (kIs_iPhoneX ? 88.f : 64.f)
+
+#define KSAFEBAR_HEIGHT  ([UIScreen mainScreen].bounds.size.height >= 812.0 ? 34 : 0.0) //底部安全区域高度
+#define KStateBar_HEIGHT  ([UIScreen mainScreen].bounds.size.height >= 812.0 ? 44 : 20) //顶部安全区域高度
+/** 常量数 */
+#define DCMargin 10
+
+#ifdef __OBJC__
+
+#import "AppDelegate.h"
+//布局
+#import "Masonry.h"
+#import "yzProductPubObject.h"
+//图片
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "GKPhotoBrowser.h"
+//#import "UIImage+HttpImgSize.h"
+//progress
+#import "DDProgressHUD.h"
+
+//JSON
+#import "JSON.h"
+//网络
+#import "AFNetworking.h"
+#import "CCAFNetWork.h"
+//网络监测相关
+#import "NetReachablity.h"
+
+//加入购物车动画
+//#import "ShoppingCartAnimaition.h"
+
+//支付宝
+#import <AlipaySDK/AlipaySDK.h>
+
+//阿里云
+#import "AliyunOSImageAssistant.h"
+
+//#import "yzTabViewController.h"
+//刷新
+#import "MJRefresh.h"
+
+//轮播图广告
+#import "TjcclzCirclePlayImageView.h"
+
+//tableview自适应cell height
+//#import "UITableView+FDTemplateLayoutCell.h"
+
+
+//uitableview无数据
+#import "JYEmpty.h"
+
+//二维码
+#import "UIView+DCPagerFrame.h"
+
+//产品数据model
+//#import "GoodsInfoModel.h"
+//用户数据model
+#import "yzUserInfoModel.h"
+#import "yzProductPubObject.h"
+#import "BBUserData.h"
+//collecLayout
+//#import "CustomeViewLayout.h"
+//时间控件
+#import "PGDatePickManager.h"
+//小区数据model
+#import "yzXiaoQuModel.h"
+/** 登录页面 */
+#import "yzLoginViewController.h"
+/** 扫描 */
+#import "DCGMScanViewController.h"
+
+/** FMDB */
+#import "FMDB.h"
+#import <UShareUI/UShareUI.h>
+#endif
+
+
+
+#endif /* yzProductPrefixHeader_pch */

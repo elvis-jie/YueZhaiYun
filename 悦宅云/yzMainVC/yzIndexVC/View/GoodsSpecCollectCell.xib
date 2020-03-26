@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HYJinChangTiJ.ttf">
+            <string>HYJinChangTiJ</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GoodsSpecCollectCell">
+            <rect key="frame" x="0.0" y="0.0" width="85.5" height="30"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="85.5" height="30"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="套餐一" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntd-cZ-wDC">
+                        <rect key="frame" x="0.0" y="0.0" width="85.5" height="30"/>
+                        <color key="backgroundColor" red="0.39607843139999999" green="0.52156862749999999" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="HYJinChangTiJ" family="HYJinChangTiJ" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ntd-cZ-wDC" secondAttribute="bottom" id="7Gd-pV-ep5"/>
+                <constraint firstItem="Ntd-cZ-wDC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PkJ-zW-6me"/>
+                <constraint firstItem="Ntd-cZ-wDC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="S4k-Cy-5mt"/>
+                <constraint firstAttribute="trailing" secondItem="Ntd-cZ-wDC" secondAttribute="trailing" id="lnU-V9-76a"/>
+            </constraints>
+            <connections>
+                <outlet property="specValueLable" destination="Ntd-cZ-wDC" id="s8K-O6-Tly"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HYJinChangTiJ.ttf">
+            <string>HYJinChangTiJ</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="yzOrderSettleViewController">
+            <connections>
+                <outlet property="listTableView" destination="e1o-29-5wB" id="Mcm-C2-FXV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="e1o-29-5wB">
+                    <rect key="frame" x="15" y="0.0" width="345" height="618"/>
+                    <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="BXh-IS-MnR"/>
+                        <outlet property="delegate" destination="-1" id="jdc-YD-hxZ"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5A-Bo-4tr">
+                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yig-SV-USf">
+                            <rect key="frame" x="253.5" y="5" width="106.5" height="39"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="39" id="0sL-00-EU4"/>
+                                <constraint firstAttribute="width" constant="106.5" id="AoC-m5-E0l"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HYJinChangTiJ" family="HYJinChangTiJ" pointSize="20"/>
+                            <state key="normal" title="付款" backgroundImage="yz_orderSettle_pay_bg.png"/>
+                            <connections>
+                                <action selector="createOrderClick:" destination="-1" eventType="touchUpInside" id="Kea-k7-J5Y"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="yig-SV-USf" secondAttribute="trailing" constant="15" id="8iU-Bh-ngI"/>
+                        <constraint firstItem="yig-SV-USf" firstAttribute="centerY" secondItem="e5A-Bo-4tr" secondAttribute="centerY" id="Uhe-yq-p9h"/>
+                        <constraint firstAttribute="height" constant="49" id="iH8-qW-OeE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="e5A-Bo-4tr" secondAttribute="trailing" id="4Je-wD-lbx"/>
+                <constraint firstItem="e5A-Bo-4tr" firstAttribute="top" secondItem="e1o-29-5wB" secondAttribute="bottom" id="EU1-tg-6NE"/>
+                <constraint firstItem="e1o-29-5wB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aF3-kb-gj1"/>
+                <constraint firstAttribute="bottom" secondItem="e5A-Bo-4tr" secondAttribute="bottom" id="hQc-8r-XgI"/>
+                <constraint firstItem="e5A-Bo-4tr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lgb-PE-EWj"/>
+                <constraint firstAttribute="trailing" secondItem="e1o-29-5wB" secondAttribute="trailing" constant="15" id="mcO-H6-JnK"/>
+                <constraint firstItem="e1o-29-5wB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="nYF-lM-g4d"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="yz_orderSettle_pay_bg.png" width="106" height="39"/>
+    </resources>
+</document>
